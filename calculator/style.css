@@ -1,0 +1,116 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ffb6d9,#ffc1e3,#d8b4fe,#c4b5fd);
+    overflow:hidden;
+}
+
+.calculator{
+    width:360px;
+    padding:25px;
+    border-radius:30px;
+    background:rgba(255,255,255,0.35);
+    backdrop-filter:blur(15px);
+    box-shadow:0 15px 35px rgba(255,105,180,0.35);
+    border:2px solid rgba(255,255,255,0.5);
+}
+
+.calculator h2{
+    text-align:center;
+    color:#ff1493;
+    font-size:28px;
+    margin-bottom:18px;
+    letter-spacing:2px;
+    text-shadow:0 0 10px #fff;
+}
+
+#display{
+    width:100%;
+    height:75px;
+    border:none;
+    outline:none;
+    border-radius:18px;
+    margin-bottom:20px;
+    padding:15px;
+    font-size:30px;
+    text-align:right;
+    background:white;
+    color:#d63384;
+    box-shadow:inset 0 5px 12px rgba(255,182,193,0.6);
+}
+
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+}
+
+button{
+    height:65px;
+    border:none;
+    border-radius:18px;
+    font-size:22px;
+    cursor:pointer;
+    background:linear-gradient(145deg,#ffd6ec,#f8bbff);
+    color:#c2185b;
+    font-weight:bold;
+    transition:0.3s;
+    box-shadow:0 6px 12px rgba(255,105,180,0.3);
+}
+
+button:hover{
+    transform:translateY(-5px) scale(1.05);
+    background:linear-gradient(145deg,#ff69b4,#d946ef);
+    color:white;
+    box-shadow:0 0 18px rgba(255,20,147,0.7);
+}
+
+button:active{
+    transform:scale(0.95);
+}
+
+.operator{
+    background:linear-gradient(145deg,#ff85c2,#ff4fa3);
+    color:white;
+}
+
+.operator:hover{
+    background:linear-gradient(145deg,#ff1493,#c026d3);
+}
+
+.equal{
+    grid-row:span 2;
+    background:linear-gradient(145deg,#c084fc,#a855f7);
+    color:white;
+}
+
+.equal:hover{
+    background:linear-gradient(145deg,#9333ea,#7e22ce);
+}
+
+.zero{
+    grid-column:span 2;
+}
+
+@media(max-width:450px){
+    .calculator{
+        width:95%;
+    }
+
+    button{
+        height:60px;
+    }
+
+    #display{
+        font-size:26px;
+    }
+}
